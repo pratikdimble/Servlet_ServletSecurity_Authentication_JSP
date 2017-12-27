@@ -9,8 +9,8 @@ pageEncoding="ISO-8859-1"%>
 <body>
 <h1>Login Form</h1>
 <form action="j_security_check">
-User Name<input type="text" name="j_username" /><br>
-Password<input type="password" name="j_password"/><br>
+  User Name&nbsp;&nbsp; &nbsp;<input type="text" name="j_username" /><br>
+  Password  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="password" name="j_password"/><br>
 <input type="submit" value="Login"/>
 </form>
 </body>
