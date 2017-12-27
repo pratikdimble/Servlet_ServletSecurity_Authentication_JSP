@@ -1,0 +1,31 @@
+  <?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<servlet>
+<servlet-name>ts</servlet-name>
+<servlet-class>com.pratik.servlet.TestServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>ts</servlet-name>
+<url-pattern>/test</url-pattern>
+</servlet-mapping>
+<security-constraint>
+<web-resource-collection>
+<web-resource-name>checkedServlet</web-resource-name>
+<url-pattern>/test</url-pattern>
+<http-method>GET</http-method>
+</web-resource-collection>
+<auth-constraint>
+<role-name>admin</role-name>
+</auth-constraint>
+</security-constraint>
+<login-config>
+<auth-method> FORM </auth-method>
+<form-login-config>
+<form-login-page>/login.jsp</form-login-page>
+<form-error-page>/error.html</form-error-page>
+</form-login-config>
+</login-config>
+<security-role>
+<role-name>admin</role-name> 
+</security-role> 
+</web-app>
